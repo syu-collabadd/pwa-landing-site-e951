@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#6366F1" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#6366F1">
+  <meta name="description" content="Aura brings AI, collaboration, and analytics together in one beautiful workspace. Stop context-switching. Start moving.">
+  <meta name="keywords" content="productivity, AI, team collaboration, project management, workflow">
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon.svg">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Aura">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aura — Work that flows">
+  <meta property="og:description" content="AI-powered workflows for modern teams. Plan, build, and ship without the chaos.">
+  <meta property="og:image" content="icons/icon.svg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aura — Work that flows">
+  <meta name="twitter:description" content="AI-powered workflows for modern teams.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <title>Aura — Work that flows</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="logo" aria-label="Aura home">
+        <svg class="logo-star" width="22" height="22" viewBox="0 0 512 512" aria-hidden="true">
+          <defs><linearGradient id="ls" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#818CF8"/><stop offset="100%" stop-color="#C084FC"/></linearGradient></defs>
+          <path d="M256 40C258 40 272 174 336 228 C400 282 472 256 472 256 C472 256 400 230 336 284 C272 338 258 472 256 472 C254 472 240 338 176 284 C112 230 40 256 40 256 C40 256 112 282 176 228 C240 174 254 40 256 40Z" fill="url(#ls)"/>
+        </svg>
+        Aura
+      </a>
+
+      <div class="nav-links" role="navigation" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Pricing</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-ghost btn-sm">Sign in</a>
+        <a href="#contact" class="btn btn-primary btn-sm">Get started</a>
+      </div>
+
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="nav-drawer" id="navDrawer" role="dialog" aria-label="Mobile menu">
+      <a href="#features" class="drawer-link">Features</a>
+      <a href="#testimonials" class="drawer-link">Reviews</a>
+      <a href="#contact" class="drawer-link">Pricing</a>
+      <div class="drawer-actions">
+        <a href="#contact" class="btn btn-ghost">Sign in</a>
+        <a href="#contact" class="btn btn-primary">Get started free</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section class="hero" id="hero" aria-label="Hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="grid-lines"></div>
+    </div>
+
+    <div class="hero-body">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-pulse"></span>
+          New · AI agent workflows just shipped
+        </div>
+
+        <h1 class="hero-title">
+          Work<br>
+          that <span class="gradient-text">flows.</span>
+        </h1>
+
+        <p class="hero-sub">
+          Aura brings AI, real-time collaboration, and smart analytics together in one workspace. Stop context-switching. Start shipping.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary btn-lg">
+            Start for free
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+
+          <!-- Android/Chrome install button (shown by JS) -->
+          <button class="btn btn-outline btn-lg" id="installBtn" hidden aria-label="Install Aura app">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2v13"/><path d="M7 11l5 5 5-5"/><rect x="3" y="18" width="18" height="2" rx="1"/></svg>
+            Install app
+          </button>
+
+          <!-- iOS hint (shown by JS for iOS Safari) -->
+          <button class="btn btn-outline btn-lg" id="iosInstallBtn" hidden aria-label="Add Aura to home screen">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2v13"/><path d="M7 11l5 5 5-5"/><rect x="3" y="18" width="18" height="2" rx="1"/></svg>
+            Add to Home Screen
+          </button>
+        </div>
+
+        <div class="hero-proof">
+          <div class="proof-avatars" aria-label="Customer avatars">
+            <div class="proof-av" style="background:linear-gradient(135deg,#6366F1,#8B5CF6)">S</div>
+            <div class="proof-av" style="background:linear-gradient(135deg,#06B6D4,#6366F1)">M</div>
+            <div class="proof-av" style="background:linear-gradient(135deg,#F59E0B,#EF4444)">A</div>
+            <div class="proof-av" style="background:linear-gradient(135deg,#10B981,#06B6D4)">K</div>
+            <div class="proof-av proof-av-plus">+</div>
+          </div>
+          <p class="proof-text">Trusted by <strong>50,000+</strong> teams worldwide</p>
+        </div>
+      </div>
+
+      <!-- Floating dashboard visual -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="dash-card dash-main float-a">
+          <div class="dash-header">
+            <div class="traffic-lights">
+              <span class="tl tl-red"></span>
+              <span class="tl tl-yellow"></span>
+              <span class="tl tl-green"></span>
+            </div>
+            <span class="dash-title">Team Pulse</span>
+          </div>
+          <div class="dash-body">
+            <div class="metric-row">
+              <span class="metric-label">Sprint velocity</span>
+              <span class="metric-val">78%</span>
+            </div>
+            <div class="prog-bar"><div class="prog-fill" style="width:78%"></div></div>
+
+            <div class="metric-row">
+              <span class="metric-label">Tasks completed</span>
+              <span class="metric-val">92%</span>
+            </div>
+            <div class="prog-bar"><div class="prog-fill" style="width:92%"></div></div>
+
+            <div class="metric-row">
+              <span class="metric-label">Team satisfaction</span>
+              <span class="metric-val">95%</span>
+            </div>
+            <div class="prog-bar"><div class="prog-fill prog-fill-green" style="width:95%"></div></div>
+          </div>
+          <div class="dash-foot">
+            <div class="dash-sparkline">
+              <svg width="100%" height="36" viewBox="0 0 200 36" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="sg" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#6366F1" stop-opacity="0.4"/>
+                    <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0 30 L20 22 L40 26 L60 14 L80 18 L100 10 L120 14 L140 6 L160 10 L180 4 L200 2" fill="none" stroke="#6366F1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M0 30 L20 22 L40 26 L60 14 L80 18 L100 10 L120 14 L140 6 L160 10 L180 4 L200 2 L200 36 L0 36Z" fill="url(#sg)"/>
+              </svg>
+            </div>
+            <span class="dash-trend">↑ 12% this week</span>
+          </div>
+        </div>
+
+        <div class="dash-card dash-mini dash-top float-b">
+          <div class="mini-icon mini-green">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <div class="mini-title">v3.1 shipped!</div>
+            <div class="mini-sub">2 minutes ago</div>
+          </div>
+        </div>
+
+        <div class="dash-card dash-mini dash-bottom float-c">
+          <div class="mini-icon mini-purple">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <div>
+            <div class="mini-title">AI saved 3h today</div>
+            <div class="mini-sub">4 tasks auto-triaged</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Stats ── -->
+  <section class="stats-bar" aria-label="Key metrics">
+    <div class="container">
+      <ul class="stats-list" role="list">
+        <li class="stat-item">
+          <div class="stat-num" data-target="50000" data-suffix="k+" data-divisor="1000">0k+</div>
+          <div class="stat-label">Teams onboarded</div>
+        </li>
+        <li class="stat-item">
+          <div class="stat-num stat-static">4.9 ★</div>
+          <div class="stat-label">Average rating</div>
+        </li>
+        <li class="stat-item">
+          <div class="stat-num stat-static">99.9%</div>
+          <div class="stat-label">Uptime SLA</div>
+        </li>
+        <li class="stat-item">
+          <div class="stat-num" data-target="2" data-suffix="M+">0M+</div>
+          <div class="stat-label">Hours saved</div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── Features ── -->
+  <section class="features" id="features" aria-label="Features">
+    <div class="container">
+      <header class="section-head reveal">
+        <div class="section-chip">Features</div>
+        <h2>Everything your team needs</h2>
+        <p>One workspace to plan, build, and ship — without the chaos.</p>
+      </header>
+
+      <div class="features-grid" role="list">
+        <article class="feat-card reveal" role="listitem">
+          <div class="feat-icon feat-icon-indigo" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <h3>AI-Powered Workflows</h3>
+          <p>Let AI handle routine triage, surface blockers early, and keep your team focused on the work that matters.</p>
+        </article>
+
+        <article class="feat-card reveal" role="listitem" style="--delay:.08s">
+          <div class="feat-icon feat-icon-cyan" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Real-Time Collaboration</h3>
+          <p>Work alongside your team live — no conflicts, no stale docs, no "which version is this?" moments.</p>
+        </article>
+
+        <article class="feat-card reveal" role="listitem" style="--delay:.16s">
+          <div class="feat-icon feat-icon-violet" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>Smart Analytics</h3>
+          <p>Beautiful dashboards that surface exactly what's working and where to double down — no SQL required.</p>
+        </article>
+
+        <article class="feat-card reveal" role="listitem" style="--delay:.24s">
+          <div class="feat-icon feat-icon-green" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3>Enterprise Security</h3>
+          <p>SOC 2 Type II, end-to-end encryption, SSO, and granular permissions baked in from day one.</p>
+        </article>
+
+        <article class="feat-card reveal" role="listitem" style="--delay:.32s">
+          <div class="feat-icon feat-icon-amber" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          </div>
+          <h3>200+ Integrations</h3>
+          <p>Slack, GitHub, Jira, Figma, Notion — plug into your existing stack in minutes, not weeks.</p>
+        </article>
+
+        <article class="feat-card reveal" role="listitem" style="--delay:.4s">
+          <div class="feat-icon feat-icon-rose" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
+          <h3>Works Everywhere</h3>
+          <p>Native feel on iOS and Android via this PWA. Install straight from your browser — no App Store wait.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Testimonials ── -->
+  <section class="testimonials" id="testimonials" aria-label="Testimonials">
+    <div class="container">
+      <header class="section-head reveal">
+        <div class="section-chip">Testimonials</div>
+        <h2>Loved by teams<br class="desktop-br"> building the future</h2>
+      </header>
+
+      <div class="testimonials-grid">
+        <blockquote class="testi-card reveal">
+          <div class="stars" aria-label="5 stars">★★★★★</div>
+          <p>"Aura cut our sprint planning from 3 hours to 20 minutes. The AI suggestions are eerily accurate — and the whole team actually uses it, which never happened with our old tools."</p>
+          <footer class="testi-author">
+            <div class="testi-av" style="background:linear-gradient(135deg,#6366F1,#8B5CF6)">S</div>
+            <div>
+              <cite class="author-name">Sarah Chen</cite>
+              <div class="author-role">VP Engineering · Stripe</div>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testi-card reveal" style="--delay:.1s">
+          <div class="stars" aria-label="5 stars">★★★★★</div>
+          <p>"We moved our entire 40-person product team to Aura in a weekend. The migration was painless and velocity jumped 30% in month one. I was genuinely shocked."</p>
+          <footer class="testi-author">
+            <div class="testi-av" style="background:linear-gradient(135deg,#06B6D4,#6366F1)">M</div>
+            <div>
+              <cite class="author-name">Marcus Williams</cite>
+              <div class="author-role">Head of Product · Linear</div>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testi-card reveal" style="--delay:.2s">
+          <div class="stars" aria-label="5 stars">★★★★★</div>
+          <p>"The analytics dashboard alone is worth the price. I finally have a real-time view of what my distributed team is doing — without micromanaging anyone."</p>
+          <footer class="testi-author">
+            <div class="testi-av" style="background:linear-gradient(135deg,#F59E0B,#EF4444)">A</div>
+            <div>
+              <cite class="author-name">Aisha Okonkwo</cite>
+              <div class="author-role">CTO · Vercel</div>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact / CTA ── -->
+  <section class="contact" id="contact" aria-label="Contact and signup">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-text reveal">
+          <div class="section-chip">Get started</div>
+          <h2>Ready to move<br>faster?</h2>
+          <p>Join 50,000+ teams. Your first workspace is free — no credit card, no setup fee, no gotchas.</p>
+          <ul class="perks-list" role="list">
+            <li><span class="perk-check" aria-hidden="true">✓</span> 14-day free trial</li>
+            <li><span class="perk-check" aria-hidden="true">✓</span> No credit card required</li>
+            <li><span class="perk-check" aria-hidden="true">✓</span> Free onboarding call</li>
+            <li><span class="perk-check" aria-hidden="true">✓</span> Cancel anytime</li>
+          </ul>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate aria-label="Sign up form" style="--delay:.12s">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Jane" autocomplete="given-name" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last name</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Smith" autocomplete="family-name" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Work email</label>
+            <input type="email" id="email" name="email" placeholder="jane@company.com" autocomplete="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="company">Company <span class="form-optional">(optional)</span></label>
+            <input type="text" id="company" name="company" placeholder="Acme Corp" autocomplete="organization">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Anything you'd like us to know?</label>
+            <textarea id="message" name="message" rows="3" placeholder="Team size, current tools, goals…"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-full" id="submitBtn">
+            <span id="btnText">Start free trial</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+
+          <p class="form-legal">
+            By signing up you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+          </p>
+
+          <!-- Success message (shown by JS) -->
+          <div class="form-success" id="formSuccess" hidden role="alert">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="20 6 9 17 4 12"/></svg>
+            <div>
+              <strong>You're on the list!</strong>
+              <p>We'll be in touch within 24 hours with your login details.</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo" aria-label="Aura home">
+            <svg class="logo-star" width="20" height="20" viewBox="0 0 512 512" aria-hidden="true">
+              <defs><linearGradient id="ls2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#818CF8"/><stop offset="100%" stop-color="#C084FC"/></linearGradient></defs>
+              <path d="M256 40C258 40 272 174 336 228 C400 282 472 256 472 256 C472 256 400 230 336 284 C272 338 258 472 256 472 C254 472 240 338 176 284 C112 230 40 256 40 256 C40 256 112 282 176 228 C240 174 254 40 256 40Z" fill="url(#ls2)"/>
+            </svg>
+            Aura
+          </a>
+          <p class="footer-tagline">Work that flows.</p>
+          <p class="footer-copy">© 2026 Aura Technologies, Inc.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <a href="#features">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">Changelog</a>
+            <a href="#">Roadmap</a>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Careers</a>
+            <a href="#">Press</a>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <a href="#contact">Contact</a>
+            <a href="#">Docs</a>
+            <a href="#">Status</a>
+            <a href="#">Security</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-legal-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+        </div>
+        <p class="footer-credit">Built with ♥ for teams everywhere</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── iOS Install Banner ── -->
+  <aside class="ios-banner" id="iosBanner" hidden role="complementary" aria-label="Install app">
+    <div class="ios-banner-inner">
+      <svg class="ios-logo" width="36" height="36" viewBox="0 0 512 512" aria-hidden="true">
+        <rect width="512" height="512" rx="100" fill="#07070F"/>
+        <defs><linearGradient id="ib" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#818CF8"/><stop offset="100%" stop-color="#C084FC"/></linearGradient></defs>
+        <path d="M256 80C258 80 272 186 332 228 C392 270 452 256 452 256 C452 256 392 242 332 284 C272 326 258 432 256 432 C254 432 240 326 180 284 C120 242 60 256 60 256 C60 256 120 270 180 228 C240 186 254 80 256 80Z" fill="url(#ib)"/>
+      </svg>
+      <div class="ios-banner-text">
+        <strong>Install Aura</strong>
+        <span>Tap <b>Share</b> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:middle" aria-label="share icon"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> then <b>Add to Home Screen</b></span>
+      </div>
+      <button class="ios-banner-close" id="iosBannerClose" aria-label="Dismiss">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="ios-arrow" aria-hidden="true">▼</div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "name": "Aura — Work that flows",
+  "short_name": "Aura",
+  "description": "AI-powered workflows for modern teams. Plan, build, and ship without the chaos.",
+  "start_url": "/pwa-landing-site-e951/",
+  "scope": "/pwa-landing-site-e951/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#6366F1",
+  "background_color": "#07070F",
+  "lang": "en",
+  "categories": ["productivity", "business"],
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "form_factor": "narrow",
+      "label": "Aura dashboard"
+    }
+  ],
+  "prefer_related_applications": false
+}
